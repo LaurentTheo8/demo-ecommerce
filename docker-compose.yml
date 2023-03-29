@@ -4,11 +4,9 @@ services:
   database:
     image: 'mysql:latest'
     restart: always
-    env_file:
-      - .env.local
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABSE: ${MYSQL_DATABSE}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     ports:
       - '3306'
 
